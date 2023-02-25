@@ -1,0 +1,227 @@
+{
+	"info": {
+		"_postman_id": "331c37f9-37d0-46b0-86f3-daee3f92b900",
+		"name": "สร้างริชเมนู",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "24138573"
+	},
+	"item": [
+		{
+			"name": "สร้างริชเมนูลงทะเบียน",
+			"item": [
+				{
+					"name": "Create a rich menu",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"size\": {\r\n    \"width\": 2500,\r\n    \"height\": 1686\r\n  },\r\n  \"selected\": true,\r\n  \"name\": \"Main Rich Menu\",\r\n  \"chatBarText\": \"เมนูหลัก\",\r\n  \"areas\": [\r\n    {\r\n      \"bounds\": {\r\n        \"x\": 933,\r\n        \"y\": 861,\r\n        \"width\": 655,\r\n        \"height\": 782\r\n      },\r\n      \"action\": {\r\n        \"type\": \"uri\",\r\n        \"uri\": \"https://ใส่ liffURL\"\r\n      }\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.line.me/v2/bot/richmenu",
+							"protocol": "https",
+							"host": [
+								"api",
+								"line",
+								"me"
+							],
+							"path": [
+								"v2",
+								"bot",
+								"richmenu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload  image",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "file",
+							"file": {}
+						},
+						"url": {
+							"raw": "https://api-data.line.me/v2/bot/richmenu/{{ไอดีริชเมนู}}/content",
+							"protocol": "https",
+							"host": [
+								"api-data",
+								"line",
+								"me"
+							],
+							"path": [
+								"v2",
+								"bot",
+								"richmenu",
+								"{{ไอดีริชเมนู}}",
+								"content"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Set Default Richmenu",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://api.line.me/v2/bot/user/all/richmenu/{{ไอดีริชเมนู}}",
+							"protocol": "https",
+							"host": [
+								"api",
+								"line",
+								"me"
+							],
+							"path": [
+								"v2",
+								"bot",
+								"user",
+								"all",
+								"richmenu",
+								"{{ไอดีริชเมนู}}"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "สร้างริชเมนู สำหรับครู",
+			"item": [
+				{
+					"name": "Create a rich menu",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"size\": {\r\n    \"width\": 2500,\r\n    \"height\": 1686\r\n  },\r\n  \"selected\": true,\r\n  \"name\": \"Main Rich Menu\",\r\n  \"chatBarText\": \"เมนูหลัก\",\r\n  \"areas\": [\r\n    {\r\n      \"bounds\": {\r\n        \"x\": 1765,\r\n        \"y\": 883,\r\n        \"width\": 655,\r\n        \"height\": 782\r\n      },\r\n      \"action\": {\r\n        \"type\": \"uri\",\r\n        \"uri\": \"https://www.api-wat.com/\"\r\n      }\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.line.me/v2/bot/richmenu",
+							"protocol": "https",
+							"host": [
+								"api",
+								"line",
+								"me"
+							],
+							"path": [
+								"v2",
+								"bot",
+								"richmenu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload  image",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "file",
+							"file": {}
+						},
+						"url": {
+							"raw": "https://api-data.line.me/v2/bot/richmenu/{{ไอดีริชเมนู}}/content",
+							"protocol": "https",
+							"host": [
+								"api-data",
+								"line",
+								"me"
+							],
+							"path": [
+								"v2",
+								"bot",
+								"richmenu",
+								"{{ไอดีริชเมนู}}",
+								"content"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "สร้างริชเมนู สำหรับนักเรียน",
+			"item": [
+				{
+					"name": "Create a rich menu",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"size\": {\r\n    \"width\": 2500,\r\n    \"height\": 1686\r\n  },\r\n  \"selected\": true,\r\n  \"name\": \"Main Rich Menu\",\r\n  \"chatBarText\": \"เมนูหลัก\",\r\n  \"areas\": [\r\n    {\r\n      \"bounds\": {\r\n        \"x\": 1765,\r\n        \"y\": 883,\r\n        \"width\": 655,\r\n        \"height\": 782\r\n      },\r\n      \"action\": {\r\n        \"type\": \"uri\",\r\n        \"uri\": \"https://www.google.com/\"\r\n      }\r\n    }\r\n  ]\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://api.line.me/v2/bot/richmenu",
+							"protocol": "https",
+							"host": [
+								"api",
+								"line",
+								"me"
+							],
+							"path": [
+								"v2",
+								"bot",
+								"richmenu"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload  image",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "file",
+							"file": {}
+						},
+						"url": {
+							"raw": "https://api-data.line.me/v2/bot/richmenu/{{ไอดีริชเมนู}}/content",
+							"protocol": "https",
+							"host": [
+								"api-data",
+								"line",
+								"me"
+							],
+							"path": [
+								"v2",
+								"bot",
+								"richmenu",
+								"{{ไอดีริชเมนู}}",
+								"content"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
